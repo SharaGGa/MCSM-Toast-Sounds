@@ -11,6 +11,8 @@ version="${file.jarVersion}"
 
 displayName="MCSM Toast Sounds"
 
+logoFile="toastsounds.png"
+
 authors="Nero"
 
 description='''
