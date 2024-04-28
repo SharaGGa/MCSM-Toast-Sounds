@@ -1,0 +1,30 @@
+modLoader="javafml"
+
+loaderVersion="[40,)"
+license="MIT"
+
+[[mods]]
+
+modId="toastsounds"
+
+version="${file.jarVersion}"
+
+displayName="MCSM Toast Sounds"
+
+authors="Nero"
+
+description='''
+This mod will add three different toast sounds taken from the game Minecraft: Story mode - Season Two.
+'''
+[[dependencies.toastsounds]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.toastsounds]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "mod.nero.toastsounds.mixin",
+  "mixins": [
+    "AdvMixin",
+    "RecMixin"
+  ],
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "AdvMixin",
+    "RecMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "toastsounds.mixin-refmap.json",
+  "minVersion": "0.8"
+}

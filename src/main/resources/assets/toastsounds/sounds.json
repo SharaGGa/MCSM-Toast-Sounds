@@ -1,0 +1,17 @@
+{
+  "recipe_notify" : {
+    "sounds": [
+      "toastsounds:notifies/recipe_notify"
+    ]
+  },
+  "goal_notify": {
+    "sounds": [
+      "toastsounds:notifies/goal_notify"
+    ]
+  },
+  "adv_notify": {
+    "sounds": [
+      "toastsounds:notifies/adv_notify"
+    ]
+  }
+}
