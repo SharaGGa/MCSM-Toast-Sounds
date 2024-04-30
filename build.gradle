@@ -23,7 +23,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '0.0.1a_03-1.18.2'
+version = '0.0.1b_01-1.18.2'
 group = 'mod.nero.toastsounds'
 archivesBaseName = 'toastsounds'
 
@@ -112,7 +112,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, "justtest.mixins-refmap.json"
+    add sourceSets.main, "toastsounds.mixin-refmap.json"
 }
 
 jar {
@@ -124,7 +124,10 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "nero",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+                "TweakOrder": 0,
+                "MixinConfigs": "toastsounds.mixin.json"
         ])
     }
 }

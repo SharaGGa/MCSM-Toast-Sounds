@@ -13,11 +13,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import mod.nero.toastsounds.ModSounds;
 
 @Mixin(RecipeToast.class)
-public abstract class RecMixin {
+public class RecMixin {
     @Shadow
     private boolean changed;
     @Inject(method = "render", at = @At(value = "HEAD"))
-    protected void crafttoast(PoseStack p_94814_, ToastComponent p_94815_, long p_94816_, CallbackInfoReturnable<Toast.Visibility> cir) {
+    private void crafttoast(PoseStack p_94814_, ToastComponent p_94815_, long p_94816_, CallbackInfoReturnable<Toast.Visibility> cir) {
         if (this.changed) {
             p_94815_.getMinecraft().getSoundManager().play(SimpleSoundInstance.forUI(ModSounds.RECIPE_NOTIFY.get(), 1.0F, 1.0F));
         }

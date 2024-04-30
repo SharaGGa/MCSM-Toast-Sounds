@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import mod.nero.toastsounds.ModSounds;
 
 @Mixin(AdvancementToast.class)
-public abstract class AdvMixin {
+public class AdvMixin {
     @Final
     @Shadow
     private Advancement advancement;
@@ -26,7 +26,7 @@ public abstract class AdvMixin {
     private boolean playedSound;
 
     @Inject(method = "render", at = @At(value = "HEAD"))
-    protected void advtoast(PoseStack p_94800_, ToastComponent p_94801_, long p_94802_, CallbackInfoReturnable<Toast.Visibility> cir)
+    private void advtoast(PoseStack p_94800_, ToastComponent p_94801_, long p_94802_, CallbackInfoReturnable<Toast.Visibility> cir)
     {
         DisplayInfo dspnfo = this.advancement.getDisplay();
         if (!this.playedSound) {
