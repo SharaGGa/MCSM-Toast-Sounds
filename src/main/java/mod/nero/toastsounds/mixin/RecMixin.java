@@ -1,6 +1,7 @@
 package mod.nero.toastsounds.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.toasts.RecipeToast;
 import net.minecraft.client.gui.components.toasts.Toast;
 import net.minecraft.client.gui.components.toasts.ToastComponent;
@@ -17,9 +18,9 @@ public class RecMixin {
     @Shadow
     private boolean changed;
     @Inject(method = "render", at = @At(value = "HEAD"))
-    private void crafttoast(PoseStack p_94814_, ToastComponent p_94815_, long p_94816_, CallbackInfoReturnable<Toast.Visibility> cir) {
+    private void crafttoast(GuiGraphics pGuiGraphics, ToastComponent pToastComponent, long pTimeSinceLastVisible, CallbackInfoReturnable<Toast.Visibility> cir) {
         if (this.changed) {
-            p_94815_.getMinecraft().getSoundManager().play(SimpleSoundInstance.forUI(ModSounds.RECIPE_NOTIFY.get(), 1.0F, 1.0F));
+            pToastComponent.getMinecraft().getSoundManager().play(SimpleSoundInstance.forUI(ModSounds.RECIPE_NOTIFY.get(), 1.0F, 1.0F));
         }
 
     }

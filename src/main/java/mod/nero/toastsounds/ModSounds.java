@@ -15,7 +15,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> GOAL_NOTIFY = registerSoundEvent("goal_notify");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
-        return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(MainClass.MOD_ID, name)));
+        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(MainClass.MOD_ID, name)));
     }
 
     public static void register(IEventBus eventBus) {

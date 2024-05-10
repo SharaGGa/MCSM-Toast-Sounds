@@ -23,7 +23,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '0.0.1b_01-1.18.2'
+version = '0.0.2a_01-1.20.1'
 group = 'mod.nero.toastsounds'
 archivesBaseName = 'toastsounds'
 
@@ -31,7 +31,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'parchment', version: '2022.08.07-1.18.2'
+    mappings channel: 'parchment', version: '2023.09.03-1.20.1'
 
 
     runs {
@@ -107,7 +107,7 @@ repositories {
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     testAnnotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.0'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.1.0'
 
 }
 
