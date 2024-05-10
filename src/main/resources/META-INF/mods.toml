@@ -27,6 +27,6 @@ This mod will add three different toast sounds taken from the game Minecraft: St
 [[dependencies.toastsounds]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2,1.19)"
+    versionRange="[1.20.1,1.21)"
     ordering="NONE"
     side="BOTH"
